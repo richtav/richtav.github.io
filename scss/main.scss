@@ -1,4 +1,5 @@
 @import 'config';
+@import 'menu';
 // $colors: #eb9385, #99c0bc, #937782, #2d4249;
 
 // Inputs
@@ -24,12 +25,12 @@
 // }
 
 // Nav
-.nav {
-  position: fixed;
-  z-index: 2;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
+// .nav {
+//   position: fixed;
+//   z-index: 2;
+//   right: 30px;
+//   top: 50%;
+//   transform: translateY(-50%);
 
   //   &__item {
   //     width: 12px;
@@ -44,7 +45,7 @@
   //       background-color: white;
   //     }
   //   }
-}
+// }
 
 // Sections
 // section {
