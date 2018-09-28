@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 // $colors: #eb9385, #99c0bc, #937782, #2d4249;
 
 // Inputs
@@ -89,7 +90,7 @@ body {
   color: white;
   height: 100%;
   margin: 0;
-  font: 100% "Carter One", cursive;
+  font-family: 'Perpetua Titling MT';
   line-height: 1.5;
 }
 //headings
@@ -106,7 +107,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(lighten($primary-color, 2), 0.2);
   }
 }
 
