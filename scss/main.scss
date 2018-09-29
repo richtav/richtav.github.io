@@ -1,96 +1,19 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
-// $colors: #eb9385, #99c0bc, #937782, #2d4249;
-
-// Inputs
-// input[type='radio'] {
-//   display: none;
-// }
-
-// @for $i from 1 through 4 {
-//   input[type='radio']#section#{$i}:checked ~ nav > label[for='section#{$i}'] {
-//     background-color: white;
-//   }
-
-//   input[type='radio']#section#{$i}:checked ~ section:nth-of-type(#{$i}) {
-//     z-index: 1;
-//     top: 0;
-//     transition: top 0.5s ease-in-out;
-//     transition-delay: 0s;
-//   }
-
-//   input[type='radio']#section#{$i}:checked ~ .cover {
-//    background-color: nth($colors, $i);
-//   }
-// }
-
-// Nav
-// .nav {
-//   position: fixed;
-//   z-index: 2;
-//   right: 30px;
-//   top: 50%;
-//   transform: translateY(-50%);
-
-  //   &__item {
-  //     width: 12px;
-  //     height: 12px;
-  //     display: block;
-  //     margin: 12px auto;
-  //     border: solid 2px white;
-  //     border-radius: 50%;
-  //     cursor: pointer;
-
-  //     &:hover {
-  //       background-color: white;
-  //     }
-  //   }
-// }
-
-// Sections
-// section {
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: absolute;
-//   top: 100%;
-//   right: 0;
-//   left: 0;
-//   transition-delay: 0.5s;
-// }
-
-// @for $i from 1 through 4 {
-//   section:nth-of-type(#{$i}) {
-//     background: nth($colors, $i);
-//   }
-// }
-
-// Fix the white-space
-// .cover {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   z-index: -1;
-// }
-
 * {
   box-sizing: border-box;
 }
-
 // Base
 // html,
 body {
   //   overflow: hidden;
   @include background;
   background: $primary-color;
-  color: white;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Perpetua Titling MT';
+  // font-family: 'Engravers MT Expanded';
+  font-family: 'OCR A';
   line-height: 1.5;
 }
 //headings
@@ -99,36 +22,36 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
-
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 4rem;
   }
-
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.2);
+    background: rgba(lighten($primary-color, 2), 0.3);
+    font-family: 'OCR A';
   }
 }
-
 a {
   color: #fff;
   text-decoration: none;
 }
-
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
 }
-
 .text-secondary {
   color: $secondary-color;
+}
+.text-third {
+    color: $third-color;
 }
 
 main {
   padding: 4rem;
-  height: 100%;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -146,7 +69,47 @@ main {
   &#home {
     overflow: hidden;
     h1 {
-      margin-top: 10vh;
+      margin-top: 20vh;
     }
   }
 }
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+  'bioimage bio bio'
+  'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio {
+    grid-area: bio;
+  }
+  
+  .job-1 {
+    grid-area: job1
+  }
+  
+  .job-2 {
+    grid-area: job2
+  }
+  
+  .job-3 {
+    grid-area: job3
+  }
+  
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+#main-footer {
+  text-align:center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import 'mobile';

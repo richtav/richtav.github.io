@@ -4,6 +4,7 @@
     z-index: 3;
     right: 35px;
     top: 35px;
+    
     cursor: pointer;
     @include easeOut;
   
@@ -11,7 +12,7 @@
       width: 28px;
       height: 3px;
       margin: 0 0 5px 0;
-      background: #ffffff;
+      background: $secondary-color;
       @include easeOut;
     }
   
@@ -88,10 +89,12 @@
       }
   
       .portrait {
-        width: 250px;
-        height: 250px;
-        background: url('../img/avatar.jpg');
-        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background: url('../img/portrait.jpg');
+        // background-attachment: fixed;
+        // background-size: cover;
+        border-radius: 40%;
         border: solid 3px $secondary-color;
       }
     }
@@ -99,6 +102,7 @@
     .nav-item {
       transform: translate3d(600px, 0, 0);
       @include easeOut;
+      font-family: 'OCR A';
   
       &.show {
         // Slide in from right
@@ -122,7 +126,7 @@
       @include easeOut;
   
       &:hover {
-        color: $secondary-color;
+        color: $third-color;
       }
     }
   }
