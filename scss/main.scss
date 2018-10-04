@@ -3,8 +3,8 @@
 * {
   box-sizing: border-box;
 }
-// Base
-// html,
+Base
+html,
 body {
   //   overflow: hidden;
   @include background;
@@ -74,7 +74,7 @@ main {
   }
 }
 .about-info {
-  display: grid;
+  // display: grid;
   grid-gap: 30px;
   grid-template-areas:
   'bioimage bio bio'
@@ -83,6 +83,10 @@ main {
 
   .bio {
     grid-area: bio;
+    font-size: 1.1rem;
+    background: rgba(lighten($primary-color, 2), .5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
   }
   
   .job-1 {
@@ -98,7 +102,7 @@ main {
   }
   
   .job {
-    background: rgba(lighten($primary-color, 2), 0.3);
+    background: rgba(lighten($primary-color, 2), .4);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
