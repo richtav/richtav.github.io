@@ -55,7 +55,7 @@
     .menu-branding .portrait {
       width: 200px;
       height: 200px;
-      background: url("../img/portrait.jpg");
+      background: url("../selfie2.jpeg");
       border-radius: 40%;
       border: solid 3px #00ff9f; }
   .menu .nav-item {
@@ -167,7 +167,8 @@ main {
 
 .about-info {
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio'
+ 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio {
     grid-area: bio;
@@ -277,7 +278,11 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage'
+ 'bio'
+ 'job1'
+ 'job2'
+ 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
