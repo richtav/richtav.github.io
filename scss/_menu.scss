@@ -89,8 +89,10 @@
       }
   
       .portrait {
-        width: 200px;
-        height: 200px;
+        // width: 200px;
+        // height: 200px;
+        display: flex;
+        flex: 1;
         background: url('../img/selfie2.jpeg');
         // background-attachment: fixed;
         // background-size: cover;
