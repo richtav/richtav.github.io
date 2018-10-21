@@ -53,10 +53,8 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      /* width: 220px;
-      height: 225px; */
-      display: flex;
-      flex: .5;
+      width: 200px;
+      height: 225px;
       background: url("../img/selfie2.jpeg");
       border-radius: 40%;
       border: solid 3px #00ff9f; }
