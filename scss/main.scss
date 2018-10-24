@@ -1,6 +1,5 @@
-$primary-color: #444;
-$secondary-color: #00ff9f;
-$third-color: #00b8ff;
+@import 'config';
+
 
 .text-secondary {
     color: $secondary-color;
