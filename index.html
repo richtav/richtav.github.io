@@ -12,70 +12,68 @@
   <title>Welcome To My Portfolio</title>
 </head>
 
-<body id="bg-img">
-  <header>
-    <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
+<body>
+  <header class="showcase">
+    <div class="content">
+      <div class="title">
+        Hello <span class="text-secondary">World</span>
+      </div>
+      <div class="text">
+
+      </div>
     </div>
 
-    <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait"></div>
-      </div>
-      <ul class="menu-nav">
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link">
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">
-            About Me
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="work.html" class="nav-link">
-            My Work
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">
-            Contact Me
-          </a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
-  <main id="home">
-    <h1 class="lg-heading">
-      RICHARD
-      <span class="text-secondary">TAVERAS</span>
-    </h1>
-    <h2 class="sm-heading">
-      Jr Full Stack Web Developer, <span class="text-secondary">Jr Front End Developer</span>
-    </h2>
-    <div class="about-info">
-        <div class="bio">
-          <p>
-            Hello World,
-            This website is built fully responsive using modern technologies: HTML5, CSS- transitions/grid/flex, Sass, NPM Package Manager, Javascript, and Git.
+  <section class="services">
+    <div class="container grid-3 center">
+      <div>
+        <i class="fas fa-code-branch fa-3x"></i>
+        <h3>Projects</h3>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis!</p> -->
+      </div>
+      <div>
+        <i class="fas fa-chalkboard-teacher fa-3x"></i>
+        <h3>Skills</h3>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis!</p> -->
+      </div>
+      <div>
+        <i class="fas fa-envelope fa-3x"></i>
+        <h3>Contact Me</h3>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, reiciendis!</p> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about bg-light">
+    <div class="container">
+      <div class="grid-2">
+        <div class="center">
+          <i class="fas fa-hand-spock fa-10x"></i>
+        </div>
+        <div>
+          <h3>About Me</h3>
+          <p>My name is Rich and welcome to my site. A little about myself: I'm a Java bootcamp graduate, I
+            grew up and currently live in NYC and I'm hispanic. I dabble in photography, I've hiked to all corners of
+            NYC to catch a flick. My taste of music is big on Nirvana, 90's Hip Hop/Alt Rock/Grunge. I appreciate art,
+            design and self expression in all forms, my biggest
+            aspiration right now is to be successful and learn as much as I can in web development and design.
+            <br>
+            <br>
+            I graduated from the Software Guild Java Bootcamp and enrolled for it through the TechHire Open Code
+            program
+            at LaGuardia Community College in Queens, NY. My class consisted of over 300 hours of hands on development.
+            <!-- We covered Java, JavaScript, HTML, CSS, JQuery, AJAX, CRUD, REST, the spring-framework, spring dependency
+                injection, OOP concepts, AOP programming, MVC architecture, Git, and the ever so rewarding console applications.</p> -->
           </p>
         </div>
-  
-        <div class="icons">
-  
-          <a href="https://www.linkedin.com/in/richtaveras/">
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
-          <!-- <a href="#!">
-            <i class="fab fa-github fa-2x"></i>
-          </a> -->
-        </div>
-  </main>
-  <footer id="main-footer">&copy; 2018
+      </div>
+    </div>
+  </section>
+
+  <footer class="center bg-dark">
+    <p>&copy; 2018</p>
   </footer>
   <script src="js/main.js"></script>
 </body>
