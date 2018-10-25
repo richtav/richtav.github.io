@@ -64,6 +64,18 @@ body {
     padding: 4rem 1rem;
   }
   
+  .tab {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    transition: all 0.5s ease-in-out 0.1s;
+  }
+  .tab:hover {
+    transform: scale(1.1);
+    color: #00ff9f;
+  }
+
   .grid-4 {
     display: grid;
     grid-gap: 20px;
