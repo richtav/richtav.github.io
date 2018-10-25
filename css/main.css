@@ -64,11 +64,11 @@ body {
     padding: 4rem 1rem;
   }
   
-  .grid-3 {
+  .grid-4 {
     display: grid;
     grid-gap: 20px;
     /* fractionals */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   
   .grid-2 {
