@@ -70,6 +70,7 @@ body {
     position: relative;
     margin: 0;
     transition: all 0.5s ease-in-out 0.1s;
+    list-style-type: none;
   }
   .tab:hover {
     transform: scale(1.1);
