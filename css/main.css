@@ -131,6 +131,11 @@ body {
       top: 5%;
       margin-top: 5px;
     }
+
+    .content .title {
+      font-size: 2.2rem;
+      margin-top: 1rem;
+    }
   
     .content .logo {
       height: 140px;
