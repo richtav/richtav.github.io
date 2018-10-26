@@ -29,6 +29,13 @@ body {
     -webkit-filter: blur(2px);
   }
   
+  .context {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+    
+  }
   .content {
     position: absolute;
     z-index: 1;
@@ -112,11 +119,12 @@ body {
   footer p {
     margin: 0;
   }
-  
+   /* ------------------------ media queries */
   /* Small Screens */
   @media (max-width: 560px) {
     .showcase::after {
       height: 50vh;
+      filter: blur(0px);
     }
   
     .content {
@@ -133,7 +141,7 @@ body {
       display: none;
     }
   
-    .grid-3,
+    .grid-4,
     .grid-2 {
       grid-template-columns: 1fr;
     }
