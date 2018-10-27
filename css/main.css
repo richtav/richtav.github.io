@@ -60,6 +60,7 @@ body {
   }
   
   .content .text {
+    font-size: 1.1rem;
     line-height: 1.7;
     margin-top: 1rem;
   }
