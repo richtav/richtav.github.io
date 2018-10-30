@@ -1,0 +1,10 @@
+$primary-color: #444;
+$secondary-color: #00ff9f;
+$third-color: #00b8ff;
+$forth-color: #d600ff;
+$floralwhite: rgb(255, 250, 240);
+$background-opacity: 0.3;
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+  }
