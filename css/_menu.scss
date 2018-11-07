@@ -57,7 +57,7 @@
     &-nav {
       margin: 0;
       padding: 0;
-      background: darken($primary-color, 5);
+      background: lighten(#111, 1);
       list-style: none;
       transform: translate3d(0, -100%, 0);
       @include easeOut;
@@ -68,26 +68,26 @@
       }
     }  
     // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Branding Side
-    &-branding {
-      background: $primary-color;
-      transform: translate3d(0, 100%, 0);
-      @include easeOut;
+    // &-branding {
+    //   background: $primary-color;
+    //   transform: translate3d(0, 100%, 0);
+    //   @include easeOut;
   
-      &.show {
-        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Slide in from bottom
-        transform: translate3d(0, 0, 0);
-      }
-      .portrait {
-        width: 200px;
-        height: 250px;
-        background: url(../img/blknwht.jpeg);
-        background-repeat: no-repeat;       
-        background-size: 200px 250px;
-        border-radius: 40%;
-        border: solid 3px $secondary-color;
+    //   &.show {
+    //     // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Slide in from bottom
+    //     transform: translate3d(0, 0, 0);
+    //   }
+    //   .portrait {
+    //     width: 200px;
+    //     height: 250px;
+    //     background: url(../img/blknwht.jpeg);
+    //     background-repeat: no-repeat;       
+    //     background-size: 200px 250px;
+    //     border-radius: 40%;
+    //     border: solid 3px $secondary-color;
         
-      }
-    }  
+    //   }
+    // }  
     .nav-item {
       transform: translate3d(600px, 0, 0);
       @include easeOut;
@@ -108,7 +108,7 @@
       text-transform: uppercase;
       padding: 1rem 0;
       font-weight: 300;
-      color: set-text-color($primary-color);
+      color: set-text-color($floralwhite);
       text-decoration: none;
       @include easeOut;
   
