@@ -1,258 +1,335 @@
-@import 'config';
-@import 'menu';
+@import "config", "viz", "launchPad", "menu";
+
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  
-  body {
-    background: rgba(0, 0, 0, 0.9);
-    font-family: "OCR A", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .text-secondary {
-    color: $secondary-color;
-  }
-  .text-third {
-    color: $third-color;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  background: $blak;
+  font-family: "OCR A", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+// ////////////////////////////// TEXT COLORS
+.text-secondary {
+  color: $secondary-color;
+}
+.text-third {
+  color: $third-color;
 }
 .text-forth {
-    color: $forth-color;
+  color: $forth-color;
 }
-  .showcase::after {
-    content: "";
-    height: 100vh;
-    width: 100%;
-    background-image: url("../img/warmth.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
-    transition: all 1000ms;
-  }
-  
-  .showcase:hover::after {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-  }
-  
-  .showcase:hover .splashContent {
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-  }
-  
-  .context {
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
-    padding: 4rem 1rem;
-  }
-  .splashContent {
-    color: $floralwhite;
-    position: absolute;
-    z-index: 1;
-    top: 10%;
-    left: 50%;
-    margin-top: 105px;
-    margin-left: -145px;
-    width: 300px;
-    height: 350px;
-    text-align: center;
-    transition: all 1000ms;
-  }
-  
-  .splashContent .logo {
-    height: 180px;
-    width: 180px;
-  }
-  
-  .splashContent .title {
-    font-size: 2.2rem;
-    margin-top: 1rem;
-  }
-  
-  .splashContent .text {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-top: 1rem;
-  }
-  
-  @font-face {
-    font-family: "Genericons";
-    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot");
-    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.woff")
-        format("woff"),
-      url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot")
-        format("truetype");
-  }
-  
-  .container {
-    margin: 50px auto;
-    width: 50%;
-  }
-  
-  header h1 {
-    color: $floralwhite;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .accordion {
-    background: transparent;
-  
-    width: 100%;
-    min-width: 800px;
-    display: block;
-    list-style-type: none;
-    overflow: hidden;
-    height: 200px;
-    font-size: 0;
-  }
-  
-  .tab {
-    display: inline-block;
-    background-color: transparent;
-    border-right: $secondary-color 1px solid;
-    width: 80px;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    margin: 0;
-    transition: all 0.5s ease-in-out 0.1s;
-  }
-  .tab:hover {
-    width: 450px;
-    opacity: 1;
-    border-right: $forth-color 15px solid;
-  }
-  /* before and after psuedo elements- 
+.tubeContainer {
+  width: 40%;
+  justify-content: center;
+}
+////////////////////////////////////////// LANDING SECTION
+.showcase::after {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/warmth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  transition: all 1000ms;
+}
+.showcase:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+.showcase:hover .splashContent {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+.splashContent {
+  color: $floralwhite;
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 50%;
+  margin-top: 105px;
+  margin-left: -145px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  transition: all 1000ms;
+}
+.splashContent .logo {
+  height: 180px;
+  width: 180px;
+}
+.splashContent .title {
+  font-size: 2.2rem;
+  margin-top: 1rem;
+}
+.splashContent .text {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 1rem;
+}
+// ///////////////////////////////////////////////// ACCORDION STARTS
+@font-face {
+  font-family: "Genericons";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.woff")
+      format("woff"),
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot")
+      format("truetype");
+}
+.container {
+  margin: 50px auto;
+  width: 50%;
+  // box-shadow: 0px 10px 40px rgba(0, 0, 0, 1.1),
+  //   0px 0px 40px rgba(0, 0, 0, 1.1);
+}
+header h1 {
+  color: $floralwhite;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.accordion {
+  background: transparent;
+  width: 100%;
+  min-width: 800px;
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  height: 200px;
+  font-size: 0;
+}
+.tab {
+  display: inline-block;
+  background-color: transparent;
+  border-right: $secondary-color 1px solid;
+  width: 80px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin: 2;
+  transition: all 0.5s ease-in-out 0.1s;
+}
+.tab:hover {
+  width: 450px;
+  border-right: $forth-color 15px solid;
+}
+/* /// before and after psuedo elements- 
   to add content through css*/
-  .tab:hover .social a:before {
-    margin-left: -100px;
-  }
-  
-  .tab:hover .social a:after {
-    margin-left: -5px;
-  }
-  
-  .tab .content {
-    background: $floralwhite;
-    width: 360px;
-    height: 200px;
-    margin-left: 80px;
-    padding: 5px 0 0 15px;
-    position: relative;
-  }
-  
-  .tab .content h1 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-  }
-  
-  .tab .content p {
-    font-size: 0.85rem;
-    line-height: 1.4rem;
-    padding-right: 5px;
-  }
-  
-  .social a:after,
-  .social a:before {
-    transition: all 0.4s ease-in-out 0.1s;
-    width: 80px;
-    height: 200px;
-    position: absolute;
-    text-indent: 0;
-    padding-top: 90px;
-    padding-left: 25px;
-    display: block;
-    font: normal 30px Genericons;
-    color: $floralwhite;
-  }
-  
-  .social a:after {
-    font-size: 48px;
-    padding-left: 20px;
-    padding-top: 80px;
-    margin-left: 85px;
-  }
-  
-  .bio a:before,
-  .bio a:after {
-    content:"\f304";
-  }
-  .bio a:after {
-    background-color: transparent;
-    color: $secondary-color;
-  }
-  
-  .skills a:before,
-  .skills a:after {
-    content:"\f425";
-  }
-  .skills a:after {
-    background-color: transparent;
-    color: $secondary-color;
-  }
-  
-  .hobbies a:before,
-  .hobbies a:after {
-    content:"\f102";
-  }
-  .hobbies a:after {
-    background-color: transparent;
-    color: $secondary-color;
-  }
-  
-  .linkedin a:before,
-  .linkedin a:after {
-    content: "\f208";
-  }
-  .linkedin a:after {
-    background-color: transparent;
-    color: $secondary-color;
-  }
-  
-  .instagram a:before,
-  .instagram a:after {
-    content: "\f215";
-  }
-  .instagram a:after {
-    background-color: transparent;
-    color: $secondary-color;
-  }
-  
-  .github a:before,
-  .github a:after {
-    content:"\f200";
-  }
-  .github a:after {
-    background-color: transparent;
-    color: $secondary-color;
-  }
-  .center {
-    text-align: center;
-    margin: auto;
-  }
-  
-  .bg-light {
-    background: $floralwhite;
-    color: #333;
-    /* box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
+.tab:hover .social a:before {
+  margin-left: -100px;
+}
+.tab:hover .social a:after {
+  margin-left: -5px;
+}
+.tab .content {
+  color: $primary-color;
+  background: $floralwhite;
+  width: 360px;
+  height: 200px;
+  margin-left: 80px;
+  padding: 5px 0 0 15px;
+  position: relative;
+  word-wrap: normal;
+}
+.tab .content h1 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.tab .content p {
+  font-size: 0.85rem;
+  line-height: 1rem;
+  padding-right: 25px;
+}
+.social a:after,
+.social a:before {
+  transition: all 0.4s ease-in-out 0.1s;
+  width: 80px;
+  height: 200px;
+  position: absolute;
+  text-indent: 0;
+  padding-top: 90px;
+  padding-left: 25px;
+  display: block;
+  font: normal 30px Genericons;
+  color: $floralwhite;
+}
+.social a:after {
+  font-size: 48px;
+  padding-left: 20px;
+  padding-top: 80px;
+  margin-left: 85px;
+}
+.bio a:before,
+.bio a:after {
+  content: "\f304";
+}
+.bio a:after {
+  background-color: transparent;
+  color: $secondary-color;
+}
+.skills a:before,
+.skills a:after {
+  content: "\f200";
+}
+.skills a:after {
+  background-color: transparent;
+  color: $secondary-color;
+}
+.hobbies a:before,
+.hobbies a:after {
+  content: "\f102";
+}
+.hobbies a:after {
+  background-color: transparent;
+  color: $secondary-color;
+}
+.linkedin a:before,
+.linkedin a:after {
+  content: "\f208";
+}
+.linkedin a:after {
+  background-color: transparent;
+  color: $secondary-color;
+}
+.instagram a:before,
+.instagram a:after {
+  content: "\f215";
+}
+.instagram a:after {
+  background-color: transparent;
+  color: $secondary-color;
+}
+.github a:before,
+.github a:after {
+  content: "\f200";
+}
+.github a:after {
+  background-color: transparent;
+  color: $secondary-color;
+}
+// //////////////////////////////////////////////////////  ACCORDION ENDS
+.center {
+  text-align: center;
+  margin: auto;
+}
+.mainCol {
+  background: $blak;
+}
+// ////////////////////////////////////////////////////// LAUNCH PAD
+// #sectionA {
+//   background: $blak;
+//   border: 2px solid $third-color;
+//   width: 500px;
+//   margin: auto;
+//   margin-bottom: 1rem;
+//   // box-shadow: 0px 10px 40px rgba(0, 0, 0, 1.1),
+//   //   0px 0px 40px rgba(0, 0, 0, 1.1);
+// }
+.box1 {
+  background: $blak;
+  border: 2px solid $third-color;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 1rem;
+  // box-shadow: 0px 20px 50px #1bcfe7;
+  //   0px 0px 40px rgba(0, 0, 0, 1.1);
+}
+
+.box1:before {
+  content: '';
+  top:0;
+  left:0;
+  width: 500px;
+  background: rgba(0,0,0,1);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.box1:hover:before{
+  left: -50%;
+  transform: skewX(-5deg);
+}
+
+.vz-wrapper {
+  height: 100vh;
+  // width: 500px;
+}
+
+// /////////////////////////////////////////////////////
+.bg-light {
+  background: $floralwhite;
+  color: $blak;
+  /* box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
       -30px 0px 40px rgba(0, 0, 0, 0.1);*/
+}
+
+.bg-dark {
+  background: transparent;
+  color: $floralwhite;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 2;
+}
+// ////////////////////////////////////////////////// QUERIES
+@media (max-width: 950px) {
+  .container {
+    width: 95%;
   }
-  
-  .bg-dark {
-    background: #333;
-    color: $floralwhite;
+
+  .tab {
+    display: block;
+    width: 100%;
+    border-bottom: 3px #00ff9f solid;
   }
-  
-  footer {
-    padding: 2.2rem;
+
+  .accordion {
+    display: block;
+    min-width: 450px;
+    height: auto;
   }
-  
-  footer p {
-    margin: 0;
+
+  .tab .content {
+    width: 85%;
+    word-wrap: normal;
   }
+
+  .tab:hover {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .showcase::after {
+    filter: none;
+    -webkit-filter: none;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .accordion {
+    width: 100%;
+    min-width: 350px;
+  }
+
+  .tab .content {
+    width: 85%;
+    word-wrap: normal;
+  }
+}

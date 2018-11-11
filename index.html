@@ -8,19 +8,18 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="main.js"></script>
   <title>Rich Portfolio Website</title>
 </head>
 
 <body>
   <header class="showcase">
-
     <div class="menu-btn">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
     </div>
-
     <nav class="menu">
       <div class="menu-branding">
         <div class="portrait"></div>
@@ -50,11 +49,12 @@
     </nav>
     <div class="splashContent">
       <div class="title">
-        Hello <span class="text-secondary">World</span>
+        Hello <span class="text-third">World</span>
       </div>
       <div class="text">
         This website is built fully responsive with modern technologies: HTML5, CSS3 - Transitions/grid/flex, SASS,
-        JavaScript, Git. <br><br>Some areas are underconstruction, <span class="text-secondary">Thank you for understanding.</span>
+        JavaScript, Git. <br><br>Some areas are underconstruction, <span class="text-secondary">Thank you for
+          understanding.</span>
       </div>
     </div>
   </header>
@@ -66,20 +66,20 @@
     <ul class="accordion">
       <li class="tab">
         <div class="social bio">
-          <P>About me
-            <a href="#" target="_blank">Bio</a>
+          <a href="#" target="_blank">Bio</a>
         </div>
         <div class="content">
-          <h1>Bio</h1>
+          <h1>.Bio {</h1>
           <p> I grew up and currently live in NYC. I graduated from the Software Guilds' Java Fullstack Bootcamp. I
             appreciate art, music, design and self expression in all forms, my biggest aspiration right now is to be
             successful and learn as much as I can in web development and design.
+            <h1>}</h1>
           </p>
         </div>
       </li>
       <li class="tab">
         <div class="social skills">
-          <a href="#" target="_blank">Skills</a>
+          <a href="https://github.com/richtav" target="_blank">Skills</a>
         </div>
         <div class="content">
           <h1>.Skills {</h1>
@@ -88,7 +88,7 @@
             <br>
             Backend: Java, CRUD, REST, spring-framework, spring dependency
             injection, OOP, AOP programming, MVC architecture, MySql.
-          <h1>}</h1>
+            <h1>}</h1>
         </div>
       </li>
       <li class="tab">
@@ -96,9 +96,11 @@
           <a href="" target="_blank">Hobbies</a>
         </div>
         <div class="content">
+          <h1>.Hobbies {</h1>
           <p>I dabble in photography and have been to all corners of the city to capture an image. <br><br>My taste of
             music is wide and big on 90's
             Hip Hop/Alt Rock/ and Grunge. I'd range from Nirvana, Smashing Pumpkins, to Nas and Jay-Z.
+            <h1>}</h1>
           </p>
         </div>
       </li>
@@ -132,10 +134,64 @@
       </li> -->
     </ul>
   </div>
+  <div class="mainCol context">
+    <div class="box1">
+    <section id="sectionA">
+      <div class="text text-secondary"> Working hard on some enticing code to add here, Rage on this drumset for now :)</div>
+        <div class="keys">
+            <div data-key="81" class="key">
+              <kbd>Q</kbd>
+              <span class="sound">clap</span>
+            </div>
+            <div data-key="87" class="key">
+              <kbd>W</kbd>
+              <span class="sound">hihat</span>
+            </div>
+            <div data-key="69" class="key">
+              <kbd>E</kbd>
+              <span class="sound">kick</span>
+            </div>
+            <div data-key="65" class="key">
+              <kbd>A</kbd>
+              <span class="sound">openhat</span>
+            </div>
+            <div data-key="83" class="key">
+              <kbd>S</kbd>
+              <span class="sound">boom</span>
+            </div>
+            <div data-key="68" class="key">
+              <kbd>D</kbd>
+              <span class="sound">ride</span>
+            </div>
+            <div data-key="90" class="key">
+              <kbd>Z</kbd>
+              <span class="sound">snare</span>
+            </div>
+            <div data-key="88" class="key">
+              <kbd>X</kbd>
+              <span class="sound">tom</span>
+            </div>
+            <div data-key="67" class="key">
+              <kbd>C</kbd>
+              <span class="sound">tink</span>
+            </div>
+          </div>
+    
+          <audio data-key="81" src="sounds/clap.wav"></audio>
+          <audio data-key="87" src="sounds/hihat.wav"></audio>
+          <audio data-key="69" src="sounds/kick.wav"></audio>
+          <audio data-key="65" src="sounds/openhat.wav"></audio>
+          <audio data-key="83" src="sounds/boom.wav"></audio>
+          <audio data-key="68" src="sounds/ride.wav"></audio>
+          <audio data-key="90" src="sounds/snare.wav"></audio>
+          <audio data-key="88" src="sounds/tom.wav"></audio>
+          <audio data-key="67" src="sounds/tink.wav"></audio>
+    </section>
+  </div>
+  </div>
   <footer class="center bg-dark">
     <p>&copy; 2018</p>
   </footer>
   <script src="js/main.js"></script>
 </body>
-
 </html>
