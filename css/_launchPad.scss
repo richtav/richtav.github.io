@@ -7,6 +7,19 @@
     // align-items: center;
   justify-content: center;
 }
+.keys:before {
+  top:0;
+  left:0;
+  width: 500px;
+  background: rgb(48, 235, 241);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.keys:hover:before{
+  left: -50%;
+  transform: skewX(-5deg);
+}
 
 .key {
   text-align: center;
